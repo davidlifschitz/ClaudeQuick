@@ -197,4 +197,80 @@ class APIClient {
 
         task.resume()
     }
+
+    // MARK: - Streaming API Call with Retry Logic
+
+    func streamMessageWithRetry(
+        messages: [MessageRequest],
+        model: String = "claude-3-5-sonnet-20241022",
+        maxTokens: Int = 1024,
+        temperature: Double = 0.7,
+        maxRetries: Int = 3,
+        onChunk: @escaping (String) -> Void,
+        onComplete: @escaping (Result<Void, Error>) -> Void
+    ) {
+        streamMessageWithRetryHelper(
+            messages: messages,
+            model: model,
+            maxTokens: maxTokens,
+            temperature: temperature,
+            maxRetries: maxRetries,
+            currentAttempt: 0,
+            onChunk: onChunk,
+            onComplete: onComplete
+        )
+    }
+
+    private func streamMessageWithRetryHelper(
+        messages: [MessageRequest],
+        model: String,
+        maxTokens: Int,
+        temperature: Double,
+        maxRetries: Int,
+        currentAttempt: Int,
+        onChunk: @escaping (String) -> Void,
+        onComplete: @escaping (Result<Void, Error>) -> Void
+    ) {
+        streamMessage(
+            messages: messages,
+            model: model,
+            maxTokens: maxTokens,
+            temperature: temperature,
+            onChunk: onChunk
+        ) { [weak self] result in
+            switch result {
+            case .success:
+                onComplete(.success(()))
+            case .failure(let error):
+                let nsError = error as NSError
+
+                // Determine if error is retryable (network errors, server 5xx errors, timeout)
+                let isRetryable = nsError.domain == NSURLErrorDomain ||
+                    (nsError.domain == "APIClient" && (nsError.code >= 500 || nsError.code == -1001)) ||
+                    nsError.code == NSURLErrorTimedOut ||
+                    nsError.code == NSURLErrorNetworkConnectionLost ||
+                    nsError.code == NSURLErrorNotConnectedToInternet
+
+                if isRetryable && currentAttempt < maxRetries {
+                    // Calculate exponential backoff: 2^attempt seconds (1s, 2s, 4s)
+                    let delaySeconds = Double(1 << currentAttempt)
+
+                    DispatchQueue.global().asyncAfter(deadline: .now() + delaySeconds) { [weak self] in
+                        self?.streamMessageWithRetryHelper(
+                            messages: messages,
+                            model: model,
+                            maxTokens: maxTokens,
+                            temperature: temperature,
+                            maxRetries: maxRetries,
+                            currentAttempt: currentAttempt + 1,
+                            onChunk: onChunk,
+                            onComplete: onComplete
+                        )
+                    }
+                } else {
+                    onComplete(.failure(error))
+                }
+            }
+        }
+    }
 }

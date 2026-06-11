@@ -173,6 +173,115 @@ class ChatViewModel: ObservableObject {
         }
     }
 
+    // MARK: - Streaming with Retry
+
+    func sendMessageWithStreaming() {
+        guard !userInput.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+        guard let conversationId = currentConversation?.id else {
+            createConversation()
+            return
+        }
+
+        let userMessage = Message(
+            conversationId: conversationId,
+            role: .user,
+            content: userInput,
+            contextSnapshot: ContextSnapshot(
+                messageId: UUID(),
+                contextWindowUsed: attachedContext.count,
+                tokensUsed: 0,
+                modelVersion: selectedModel
+            )
+        )
+
+        do {
+            try storageService.saveMessage(userMessage)
+            messages.append(userMessage)
+            userInput = ""
+            streamingText = ""
+
+            await sendToAPIWithRetry(messages: messages, conversationId: conversationId)
+        } catch {
+            errorMessage = "Failed to save message: \(error.localizedDescription)"
+        }
+    }
+
+    @MainActor
+    private func sendToAPIWithRetry(messages: [Message], conversationId: UUID) async {
+        isLoading = true
+        defer { isLoading = false }
+
+        let messageRequests = messages.map { message in
+            MessageRequest(role: message.role.rawValue, content: message.content)
+        }
+
+        await withCheckedContinuation { continuation in
+            var fullContent = ""
+
+            apiClient.streamMessageWithRetry(
+                messages: messageRequests,
+                model: selectedModel,
+                maxTokens: 1024,
+                temperature: temperature,
+                maxRetries: 3,
+                onChunk: { [weak self] chunk in
+                    fullContent.append(chunk)
+                    Task { @MainActor in
+                        self?.streamingText = fullContent
+                    }
+                },
+                onComplete: { [weak self] result in
+                    guard let self = self else { return }
+
+                    switch result {
+                    case .success:
+                        Task { @MainActor in
+                            do {
+                                let assistantMessage = Message(
+                                    conversationId: conversationId,
+                                    role: .assistant,
+                                    content: fullContent,
+                                    contextSnapshot: ContextSnapshot(
+                                        messageId: UUID(),
+                                        contextWindowUsed: self.attachedContext.count,
+                                        tokensUsed: 0,
+                                        modelVersion: self.selectedModel
+                                    )
+                                )
+
+                                try self.storageService.saveMessage(assistantMessage)
+                                self.messages.append(assistantMessage)
+
+                                var updatedConversation = self.currentConversation
+                                updatedConversation?.updatedAt = Date()
+                                updatedConversation?.messageCount = self.messages.count
+
+                                if let updatedConversation = updatedConversation {
+                                    try self.storageService.updateConversation(updatedConversation)
+                                    self.currentConversation = updatedConversation
+                                }
+
+                                self.streamingText = ""
+                                self.loadConversations()
+                                self.loadMessagesForConversation(conversationId)
+                                continuation.resume()
+                            } catch {
+                                self.errorMessage = "Failed to save message: \(error.localizedDescription)"
+                                continuation.resume()
+                            }
+                        }
+                    case .failure(let error):
+                        Task { @MainActor in
+                            self.errorMessage = "Failed to send message: \(error.localizedDescription)"
+                            self.streamingText = ""
+                            continuation.resume()
+                        }
+                    }
+                }
+            )
+        }
+    }
+
     // MARK: - Context Management
 
     func attachContext(_ paths: [String]) {
