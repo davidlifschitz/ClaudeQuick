@@ -170,42 +170,35 @@ struct MessageRow: View {
                 .foregroundColor(.secondary)
                 .padding(isUser ? .trailing : .leading, 4)
 
-            // Bubble row — cap at 80% of available width
-            GeometryReader { geo in
-                HStack(alignment: .bottom, spacing: 0) {
-                    if isUser { Spacer(minLength: 0) }
+            // Bubble row — user right-aligned, assistant left-aligned
+            HStack(alignment: .bottom, spacing: 0) {
+                if isUser { Spacer(minLength: 40) }
 
-                    ZStack(alignment: .bottomTrailing) {
-                        // Bubble content
-                        parseMarkdown(message.content, isUserMessage: isUser)
-                            .textSelection(.enabled)
-                            .padding(12)
-                            .background(isUser ? Color.accentColor : Color(.controlBackgroundColor))
-                            .cornerRadius(12)
+                ZStack(alignment: .bottomTrailing) {
+                    parseMarkdown(message.content, isUserMessage: isUser)
+                        .textSelection(.enabled)
+                        .padding(12)
+                        .background(isUser ? Color.accentColor : Color(.controlBackgroundColor))
+                        .cornerRadius(12)
 
-                        // Hover copy button
-                        if isHovered {
-                            Button(action: copyContent) {
-                                Image(systemName: "doc.on.doc")
-                                    .font(.caption2)
-                                    .padding(5)
-                                    .background(Color(.windowBackgroundColor).opacity(0.85))
-                                    .cornerRadius(5)
-                            }
-                            .buttonStyle(.plain)
-                            .foregroundColor(.secondary)
-                            .help("Copy to clipboard")
-                            .padding(6)
-                            .transition(.opacity)
+                    if isHovered {
+                        Button(action: copyContent) {
+                            Image(systemName: "doc.on.doc")
+                                .font(.caption2)
+                                .padding(5)
+                                .background(Color(.windowBackgroundColor).opacity(0.85))
+                                .cornerRadius(5)
                         }
+                        .buttonStyle(.plain)
+                        .foregroundColor(.secondary)
+                        .help("Copy to clipboard")
+                        .padding(6)
+                        .transition(.opacity)
                     }
-                    .frame(maxWidth: geo.size.width * 0.80, alignment: isUser ? .trailing : .leading)
-
-                    if !isUser { Spacer(minLength: 0) }
                 }
-                .frame(maxWidth: .infinity, alignment: isUser ? .trailing : .leading)
+
+                if !isUser { Spacer(minLength: 40) }
             }
-            .fixedSize(horizontal: false, vertical: true)
 
             // Token count (assistant only)
             if !isUser, let context = message.contextSnapshot, context.tokensUsed > 0 {
