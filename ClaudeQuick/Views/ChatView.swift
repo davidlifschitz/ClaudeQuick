@@ -1,15 +1,34 @@
 import SwiftUI
 
+enum SidebarTab {
+    case chat, insights
+}
+
 struct ChatView: View {
     @EnvironmentObject var chatViewModel: ChatViewModel
     @EnvironmentObject var appState: AppState
     @State private var showHistoryPanel = true
+    @State private var sidebarTab: SidebarTab = .chat
 
     var body: some View {
         NavigationView {
-            // Sidebar - Conversation History
-            HistoryView()
-                .environmentObject(chatViewModel)
+            // Sidebar - Tab Navigation
+            VStack(spacing: 0) {
+                Picker("", selection: $sidebarTab) {
+                    Image(systemName: "bubble.left.and.bubble.right").tag(SidebarTab.chat)
+                    Image(systemName: "chart.bar").tag(SidebarTab.insights)
+                }
+                .pickerStyle(.segmented)
+                .padding(8)
+
+                if sidebarTab == .chat {
+                    HistoryView()
+                        .environmentObject(chatViewModel)
+                } else {
+                    InsightsView()
+                }
+            }
+            .frame(minWidth: 260)
 
             // Main Chat Area
             if let conversation = chatViewModel.currentConversation {
