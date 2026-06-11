@@ -15,14 +15,14 @@ enum StorageServiceError: Error {
 }
 
 class StorageService {
-    static let shared = StorageService()
+    static let shared = StorageService(dbPath: StorageService.defaultDatabasePath())
 
     private var db: FMDatabase?
     private let dbPath: String
     private let jsonEncoder = JSONEncoder()
     private let jsonDecoder = JSONDecoder()
 
-    init(dbPath: String = Self.defaultDatabasePath()) {
+    init(dbPath: String) {
         self.dbPath = dbPath
         setupDatabase()
     }
@@ -163,7 +163,7 @@ class StorageService {
         guard let db = db else { throw StorageServiceError.initializationFailed }
 
         let query = "SELECT * FROM conversations ORDER BY updatedAt DESC"
-        guard let resultSet = db.executeQuery(query) else {
+        guard let resultSet = db.executeQuery(query, withArgumentsIn: []) else {
             throw StorageServiceError.databaseError("Query failed: \(db.lastError())")
         }
 
@@ -270,7 +270,7 @@ class StorageService {
             return nil
         }
 
-        let messageCount = Int(resultSet.longForColumn("messageCount"))
+        let messageCount = Int(resultSet.long(forColumn: "messageCount"))
 
         return Conversation(
             id: id,

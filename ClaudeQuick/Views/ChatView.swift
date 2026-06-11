@@ -6,11 +6,11 @@ struct ChatView: View {
     @State private var showHistoryPanel = true
 
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             // Sidebar - Conversation History
             HistoryView()
                 .environmentObject(chatViewModel)
-        } detail: {
+
             // Main Chat Area
             if let conversation = chatViewModel.currentConversation {
                 VStack(spacing: 0) {

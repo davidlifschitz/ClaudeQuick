@@ -3,7 +3,7 @@ import Foundation
 class CostTracker {
     static let shared = CostTracker()
 
-    private let storageService = StorageService.shared
+    private let usageKey = "token_usage"
 
     // Token pricing per 1M tokens (as of 2024)
     private let modelPricing: [String: (input: Double, output: Double)] = [
@@ -29,7 +29,7 @@ class CostTracker {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         let data = try encoder.encode(entries)
-        try storageService.saveData(key: "token_usage", data: data)
+        UserDefaults.standard.set(data, forKey: usageKey)
     }
 
     func fetchUsageForModel(_ model: String) throws -> [UsageEntry] {
@@ -38,10 +38,9 @@ class CostTracker {
     }
 
     func fetchAllUsage() throws -> [UsageEntry] {
-        guard let data = try storageService.loadData(key: "token_usage") else {
+        guard let data = UserDefaults.standard.data(forKey: usageKey) else {
             return []
         }
-
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         return try decoder.decode([UsageEntry].self, from: data)
@@ -72,7 +71,7 @@ class CostTracker {
     }
 
     func clearUsage() throws {
-        try storageService.delete(key: "token_usage")
+        UserDefaults.standard.removeObject(forKey: usageKey)
     }
 
     // MARK: - Private Methods

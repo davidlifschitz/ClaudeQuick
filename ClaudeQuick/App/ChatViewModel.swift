@@ -29,7 +29,7 @@ class ChatViewModel: ObservableObject {
 
     func loadConversations() {
         do {
-            conversations = try storageService.loadConversations()
+            conversations = try storageService.fetchAllConversations()
         } catch {
             errorMessage = "Failed to load conversations: \(error.localizedDescription)"
         }
@@ -54,7 +54,7 @@ class ChatViewModel: ObservableObject {
 
     func deleteConversation(_ conversation: Conversation) {
         do {
-            try storageService.deleteConversation(conversation.id)
+            try storageService.deleteConversation(id: conversation.id)
             if currentConversation?.id == conversation.id {
                 currentConversation = nil
                 messages = []
@@ -66,10 +66,15 @@ class ChatViewModel: ObservableObject {
     }
 
     func renameConversation(_ conversation: Conversation, newTitle: String) {
-        var updated = conversation
-        updated.updatedAt = Date()
+        let updated = Conversation(
+            id: conversation.id,
+            title: newTitle,
+            createdAt: conversation.createdAt,
+            updatedAt: Date(),
+            messageCount: conversation.messageCount
+        )
         do {
-            try storageService.updateConversation(updated)
+            try storageService.saveConversation(updated)
             if currentConversation?.id == conversation.id {
                 currentConversation = updated
             }
@@ -83,7 +88,7 @@ class ChatViewModel: ObservableObject {
 
     func loadMessagesForConversation(_ conversationId: UUID) {
         do {
-            messages = try storageService.loadMessages(for: conversationId)
+            messages = try storageService.fetchMessages(for: conversationId)
         } catch {
             errorMessage = "Failed to load messages: \(error.localizedDescription)"
         }
@@ -114,14 +119,16 @@ class ChatViewModel: ObservableObject {
             userInput = ""
             streamingText = ""
 
-            await sendToAPI(messages: messages, conversationId: conversationId)
+            Task {
+                await self.sendToAPI(conversationId: conversationId)
+            }
         } catch {
             errorMessage = "Failed to save message: \(error.localizedDescription)"
         }
     }
 
     @MainActor
-    private func sendToAPI(messages: [Message], conversationId: UUID) async {
+    private func sendToAPI(conversationId: UUID) async {
         isLoading = true
         defer { isLoading = false }
 
@@ -155,16 +162,17 @@ class ChatViewModel: ObservableObject {
             )
 
             try storageService.saveMessage(assistantMessage)
-            messages.append(assistantMessage)
+            self.messages.append(assistantMessage)
 
-            var updatedConversation = currentConversation
-            updatedConversation?.updatedAt = Date()
-            updatedConversation?.messageCount = messages.count
-
-            if let updatedConversation = updatedConversation {
-                try storageService.updateConversation(updatedConversation)
-                currentConversation = updatedConversation
-            }
+            let updatedConv = Conversation(
+                id: currentConversation?.id ?? conversationId,
+                title: currentConversation?.title ?? "Conversation",
+                createdAt: currentConversation?.createdAt ?? Date(),
+                updatedAt: Date(),
+                messageCount: self.messages.count
+            )
+            try storageService.saveConversation(updatedConv)
+            currentConversation = updatedConv
 
             loadConversations()
             loadMessagesForConversation(conversationId)
@@ -200,14 +208,16 @@ class ChatViewModel: ObservableObject {
             userInput = ""
             streamingText = ""
 
-            await sendToAPIWithRetry(messages: messages, conversationId: conversationId)
+            Task {
+                await self.sendToAPIWithRetry(conversationId: conversationId)
+            }
         } catch {
             errorMessage = "Failed to save message: \(error.localizedDescription)"
         }
     }
 
     @MainActor
-    private func sendToAPIWithRetry(messages: [Message], conversationId: UUID) async {
+    private func sendToAPIWithRetry(conversationId: UUID) async {
         isLoading = true
         defer { isLoading = false }
 
@@ -215,7 +225,7 @@ class ChatViewModel: ObservableObject {
             MessageRequest(role: message.role.rawValue, content: message.content)
         }
 
-        await withCheckedContinuation { continuation in
+        await withCheckedContinuation { (continuation: CheckedContinuation<Void, Never>) in
             var fullContent = ""
 
             apiClient.streamMessageWithRetry(
@@ -252,14 +262,15 @@ class ChatViewModel: ObservableObject {
                                 try self.storageService.saveMessage(assistantMessage)
                                 self.messages.append(assistantMessage)
 
-                                var updatedConversation = self.currentConversation
-                                updatedConversation?.updatedAt = Date()
-                                updatedConversation?.messageCount = self.messages.count
-
-                                if let updatedConversation = updatedConversation {
-                                    try self.storageService.updateConversation(updatedConversation)
-                                    self.currentConversation = updatedConversation
-                                }
+                                let updatedConv = Conversation(
+                                    id: self.currentConversation?.id ?? conversationId,
+                                    title: self.currentConversation?.title ?? "Conversation",
+                                    createdAt: self.currentConversation?.createdAt ?? Date(),
+                                    updatedAt: Date(),
+                                    messageCount: self.messages.count
+                                )
+                                try self.storageService.saveConversation(updatedConv)
+                                self.currentConversation = updatedConv
 
                                 self.streamingText = ""
                                 self.loadConversations()

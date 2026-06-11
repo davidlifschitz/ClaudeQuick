@@ -52,7 +52,7 @@ class SyncService {
 
         let record = CKRecord(
             recordType: conversationRecordType,
-            recordID: CKRecordID(recordName: conversation.id.uuidString)
+            recordID: CKRecord.ID(recordName: conversation.id.uuidString)
         )
 
         record["title"] = conversation.title
@@ -71,7 +71,7 @@ class SyncService {
     func fetchConversationFromCloud(id: UUID) async throws -> Conversation? {
         guard isSyncAvailable() else { throw SyncServiceError.cloudKitUnavailable }
 
-        let recordID = CKRecordID(recordName: id.uuidString)
+        let recordID = CKRecord.ID(recordName: id.uuidString)
 
         do {
             let record = try await database.record(for: recordID)
@@ -91,7 +91,7 @@ class SyncService {
         syncInProgress = true
         defer { syncInProgress = false }
 
-        let recordID = CKRecordID(recordName: id.uuidString)
+        let recordID = CKRecord.ID(recordName: id.uuidString)
 
         do {
             _ = try await database.deleteRecord(withID: recordID)
@@ -112,7 +112,7 @@ class SyncService {
 
         let record = CKRecord(
             recordType: messageRecordType,
-            recordID: CKRecordID(recordName: message.id.uuidString)
+            recordID: CKRecord.ID(recordName: message.id.uuidString)
         )
 
         record["conversationId"] = message.conversationId.uuidString
@@ -166,7 +166,7 @@ class SyncService {
         syncInProgress = true
         defer { syncInProgress = false }
 
-        let recordID = CKRecordID(recordName: id.uuidString)
+        let recordID = CKRecord.ID(recordName: id.uuidString)
 
         do {
             _ = try await database.deleteRecord(withID: recordID)
