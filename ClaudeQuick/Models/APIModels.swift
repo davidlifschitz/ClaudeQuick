@@ -1,85 +1,68 @@
 import Foundation
 
-// MARK: - API Request Models
+// MARK: - Request
 
 struct MessageRequest: Codable {
     let role: String
     let content: String
 }
 
-struct ChatCompletionRequest: Codable {
+struct AnthropicRequest: Codable {
     let model: String
     let messages: [MessageRequest]
-    let max_tokens: Int?
+    let max_tokens: Int
     let temperature: Double?
-    let stream: Bool
+    let stream: Bool?
+}
 
-    enum CodingKeys: String, CodingKey {
-        case model
-        case messages
-        case max_tokens
-        case temperature
-        case stream
+// MARK: - Response
+
+struct AnthropicResponse: Codable {
+    let id: String
+    let type: String
+    let role: String?
+    let content: [ContentBlock]
+    let model: String
+    let stop_reason: String?
+    let usage: AnthropicUsage?
+
+    var textContent: String {
+        content.compactMap { $0.text }.joined()
     }
 }
 
-// MARK: - API Response Models
-
-struct ChatCompletionResponse: Codable {
-    let id: String
-    let object: String
-    let created: Int
-    let model: String
-    let choices: [Choice]
-    let usage: Usage?
+struct ContentBlock: Codable {
+    let type: String
+    let text: String?
 }
 
-struct Choice: Codable {
-    let index: Int
-    let message: ResponseMessage?
-    let delta: Delta?
-    let finish_reason: String?
+struct AnthropicUsage: Codable {
+    let input_tokens: Int
+    let output_tokens: Int
 }
 
-struct ResponseMessage: Codable {
-    let role: String
-    let content: String
+// MARK: - Streaming
+
+struct StreamEvent: Codable {
+    let type: String
+    let index: Int?
+    let delta: StreamDelta?
+    let usage: AnthropicUsage?
 }
 
-struct Delta: Codable {
-    let role: String?
-    let content: String?
+struct StreamDelta: Codable {
+    let type: String
+    let text: String?
 }
 
-struct Usage: Codable {
-    let prompt_tokens: Int
-    let completion_tokens: Int
-    let total_tokens: Int
-}
+// MARK: - Error
 
 struct APIError: Codable {
+    let type: String
     let error: ErrorDetail
 }
 
 struct ErrorDetail: Codable {
-    let message: String
     let type: String
-    let param: String?
-    let code: String?
-}
-
-// MARK: - Streaming Models
-
-struct StreamEvent: Codable {
-    let data: String
-
-    var isStreamEnd: Bool {
-        return data == "[DONE]"
-    }
-
-    func toChatCompletion() throws -> ChatCompletionResponse? {
-        guard !isStreamEnd else { return nil }
-        let decoder = JSONDecoder()
-        return try decoder.decode(ChatCompletionResponse.self, from: data.data(using: .utf8) ?? Data())
-    }
+    let message: String
 }

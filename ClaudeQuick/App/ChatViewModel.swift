@@ -8,7 +8,7 @@ class ChatViewModel: ObservableObject {
     @Published var userInput: String = ""
     @Published var isLoading: Bool = false
     @Published var streamingText: String = ""
-    @Published var selectedModel: String = "claude-3-5-sonnet-20241022"
+    @Published var selectedModel: String = "claude-haiku-4-5-20251001"
     @Published var temperature: Double = 0.7
     @Published var attachedContext: [String] = []
     @Published var errorMessage: String?
@@ -143,8 +143,8 @@ class ChatViewModel: ObservableObject {
                 temperature: temperature
             )
 
-            guard let choice = response.choices.first,
-                  let assistantContent = choice.message?.content else {
+            let assistantContent = response.textContent
+            guard !assistantContent.isEmpty else {
                 throw NSError(domain: "ChatViewModel", code: -1, userInfo: [NSLocalizedDescriptionKey: "No response from API"])
             }
 
@@ -155,7 +155,7 @@ class ChatViewModel: ObservableObject {
                 contextSnapshot: ContextSnapshot(
                     messageId: UUID(),
                     contextWindowUsed: attachedContext.count,
-                    tokensUsed: response.usage?.completion_tokens ?? 0,
+                    tokensUsed: response.usage?.output_tokens ?? 0,
                     modelVersion: selectedModel
                 )
             )

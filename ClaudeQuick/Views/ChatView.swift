@@ -64,6 +64,22 @@ struct ChatView: View {
                                     .padding(.horizontal, 16)
                                 }
 
+                                if let error = chatViewModel.errorMessage {
+                                    HStack(spacing: 8) {
+                                        Image(systemName: "exclamationmark.circle.fill")
+                                            .foregroundColor(.red)
+                                        Text(error)
+                                            .font(.caption)
+                                            .foregroundColor(.red)
+                                        Spacer()
+                                        Button("Dismiss") { chatViewModel.errorMessage = nil }
+                                            .font(.caption)
+                                    }
+                                    .padding(.horizontal, 16)
+                                    .padding(.vertical, 8)
+                                    .background(Color.red.opacity(0.08))
+                                }
+
                                 Spacer()
                                     .frame(height: 1)
                                     .id("bottom")

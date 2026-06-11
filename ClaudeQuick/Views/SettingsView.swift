@@ -15,9 +15,9 @@ struct SettingsView: View {
     @State private var errorMessage: String?
 
     let models = [
-        "claude-3-5-sonnet-20241022",
-        "claude-3-opus-20250219",
-        "claude-3-haiku-20250307"
+        "claude-sonnet-4-6",
+        "claude-opus-4-8",
+        "claude-haiku-4-5-20251001"
     ]
 
     var body: some View {
@@ -196,12 +196,12 @@ struct SettingsView: View {
 
     private func modelDisplayName(_ model: String) -> String {
         switch model {
-        case "claude-3-5-sonnet-20241022":
-            return "Sonnet 3.5 (Balanced)"
-        case "claude-3-opus-20250219":
-            return "Opus 3 (Most Capable)"
-        case "claude-3-haiku-20250307":
-            return "Haiku 3 (Fastest)"
+        case "claude-sonnet-4-6":
+            return "Sonnet 4.6 (Balanced)"
+        case "claude-opus-4-8":
+            return "Opus 4.8 (Most Capable)"
+        case "claude-haiku-4-5-20251001":
+            return "Haiku 4.5 (Fastest)"
         default:
             return model
         }
