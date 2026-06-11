@@ -1,5 +1,13 @@
 import Foundation
 
+struct ClaudeCodeOAuthCredentials {
+    let accessToken: String
+    let refreshToken: String
+    let expiresAt: Date
+
+    var isExpired: Bool { Date() > expiresAt }
+}
+
 enum KeychainServiceError: Error {
     case itemNotFound
     case saveFailed(OSStatus)
@@ -143,6 +151,37 @@ class KeychainService {
         guard status == errSecSuccess || status == errSecItemNotFound else {
             throw KeychainServiceError.deleteFailed(status)
         }
+    }
+
+    // MARK: - Claude Code OAuth
+
+    func readClaudeCodeCredentials() throws -> ClaudeCodeOAuthCredentials {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: "Claude Code-credentials",
+            kSecReturnData as String: true,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+        ]
+
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &result)
+
+        guard status == errSecSuccess,
+              let data = result as? Data,
+              let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let oauthDict = json["claudeAiOauth"] as? [String: Any],
+              let accessToken = oauthDict["accessToken"] as? String, !accessToken.isEmpty,
+              let refreshToken = oauthDict["refreshToken"] as? String,
+              let expiresAt = oauthDict["expiresAt"] as? Double
+        else {
+            throw KeychainServiceError.itemNotFound
+        }
+
+        return ClaudeCodeOAuthCredentials(
+            accessToken: accessToken,
+            refreshToken: refreshToken,
+            expiresAt: Date(timeIntervalSince1970: expiresAt / 1000)
+        )
     }
 
     // MARK: - Check Operations

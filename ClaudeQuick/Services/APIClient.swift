@@ -6,23 +6,44 @@ class APIClient {
     private let session: URLSession
     private let baseURL = "https://api.anthropic.com"
     private var apiKey: String?
+    private var oauthToken: String?
+
+    var isAuthenticated: Bool { apiKey != nil || oauthToken != nil }
 
     init(session: URLSession = URLSession.shared) {
         self.session = session
-        loadAPIKey()
+        loadCredentials()
     }
 
-    private func loadAPIKey() {
-        do {
-            apiKey = try KeychainService.shared.retrieveAPIKey(for: "anthropic")
-        } catch {
-            apiKey = nil
+    private func loadCredentials() {
+        if let key = try? KeychainService.shared.retrieveAPIKey(for: "anthropic") {
+            apiKey = key
+            return
+        }
+        if let creds = try? KeychainService.shared.readClaudeCodeCredentials(), !creds.isExpired {
+            oauthToken = creds.accessToken
         }
     }
 
     func setAPIKey(_ key: String) throws {
         apiKey = key
+        oauthToken = nil
         try KeychainService.shared.saveAPIKey(key, for: "anthropic")
+    }
+
+    func setOAuthToken(_ token: String) {
+        oauthToken = token
+        apiKey = nil
+    }
+
+    private func applyAuth(to request: inout URLRequest) throws {
+        if let key = apiKey {
+            request.setValue(key, forHTTPHeaderField: "x-api-key")
+        } else if let token = oauthToken {
+            request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        } else {
+            throw NSError(domain: "APIClient", code: -1, userInfo: [NSLocalizedDescriptionKey: "Not authenticated"])
+        }
     }
 
     // MARK: - Synchronous API Call
@@ -33,10 +54,6 @@ class APIClient {
         maxTokens: Int = 1024,
         temperature: Double = 0.7
     ) async throws -> ChatCompletionResponse {
-        guard let apiKey = apiKey else {
-            throw NSError(domain: "APIClient", code: -1, userInfo: [NSLocalizedDescriptionKey: "API key not set"])
-        }
-
         let request = ChatCompletionRequest(
             model: model,
             messages: messages,
@@ -45,11 +62,11 @@ class APIClient {
             stream: false
         )
 
-        var urlRequest = URLRequest(url: URL(string: "\(baseURL)/messages")!)
+        var urlRequest = URLRequest(url: URL(string: "\(baseURL)/v1/messages")!)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue("2023-06-01", forHTTPHeaderField: "anthropic-version")
-        urlRequest.setValue(apiKey, forHTTPHeaderField: "x-api-key")
+        try applyAuth(to: &urlRequest)
 
         let encoder = JSONEncoder()
         urlRequest.httpBody = try encoder.encode(request)
@@ -93,11 +110,6 @@ class APIClient {
         onChunk: @escaping (String) -> Void,
         onComplete: @escaping (Result<Void, Error>) -> Void
     ) {
-        guard let apiKey = apiKey else {
-            onComplete(.failure(NSError(domain: "APIClient", code: -1, userInfo: [NSLocalizedDescriptionKey: "API key not set"])))
-            return
-        }
-
         let request = ChatCompletionRequest(
             model: model,
             messages: messages,
@@ -106,11 +118,13 @@ class APIClient {
             stream: true
         )
 
-        var urlRequest = URLRequest(url: URL(string: "\(baseURL)/messages")!)
+        var urlRequest = URLRequest(url: URL(string: "\(baseURL)/v1/messages")!)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue("2023-06-01", forHTTPHeaderField: "anthropic-version")
-        urlRequest.setValue(apiKey, forHTTPHeaderField: "x-api-key")
+        do { try applyAuth(to: &urlRequest) } catch {
+            onComplete(.failure(error)); return
+        }
 
         do {
             let encoder = JSONEncoder()
