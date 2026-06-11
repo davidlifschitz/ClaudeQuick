@@ -21,7 +21,7 @@ struct SettingsView: View {
     ]
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 // API Key Section
                 Section("API Configuration") {
@@ -91,7 +91,7 @@ struct SettingsView: View {
                                 Text("Total Cost")
                                 Spacer()
                                 Text(String(format: "$%.4f", totalCost))
-                                    .fontWeight(.medium)
+                                    .font(.headline)
                             }
 
                             HStack {
@@ -143,7 +143,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .primaryAction) {
                     Button("Done") {
                         dismiss()
                     }

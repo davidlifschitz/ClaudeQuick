@@ -17,6 +17,5 @@ struct ClaudeQuickApp: App {
             }
         }
         .windowStyle(.hiddenTitleBar)
-        .windowResizabilityContentSize()
     }
 }

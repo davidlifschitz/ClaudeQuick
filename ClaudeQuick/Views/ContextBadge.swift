@@ -10,8 +10,7 @@ struct ContextBadge: View {
                     .foregroundColor(.accentColor)
 
                 Text("Attached Context (\(chatViewModel.attachedContext.count))")
-                    .font(.caption)
-                    .fontWeight(.medium)
+                    .font(.headline)
 
                 Spacer()
 
@@ -72,7 +71,7 @@ struct ContextItem: View {
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
-        .background(Color(.systemGray6))
+        .background(Color.gray.opacity(0.2))
         .cornerRadius(4)
     }
 }

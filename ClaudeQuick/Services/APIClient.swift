@@ -13,12 +13,16 @@ class APIClient {
     }
 
     private func loadAPIKey() {
-        apiKey = KeychainService.shared.retrieve(key: "anthropic_api_key")
+        do {
+            apiKey = try KeychainService.shared.retrieveAPIKey(for: "anthropic")
+        } catch {
+            apiKey = nil
+        }
     }
 
     func setAPIKey(_ key: String) throws {
         apiKey = key
-        try KeychainService.shared.save(key: "anthropic_api_key", value: key)
+        try KeychainService.shared.saveAPIKey(key, for: "anthropic")
     }
 
     // MARK: - Synchronous API Call

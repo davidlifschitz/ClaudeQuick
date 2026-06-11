@@ -1,0 +1,4 @@
+module FMDB {
+    umbrella header "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb/FMDB.h"
+    export *
+}

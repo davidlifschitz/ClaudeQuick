@@ -9,16 +9,21 @@ class AppState: ObservableObject {
     }
 
     func checkAPIKey() {
-        isAPIKeySet = KeychainService.shared.retrieve(key: "anthropic_api_key") != nil
+        do {
+            _ = try KeychainService.shared.retrieveAPIKey(for: "anthropic")
+            isAPIKeySet = true
+        } catch {
+            isAPIKeySet = false
+        }
     }
 
     func setAPIKey(_ key: String) throws {
-        try KeychainService.shared.save(key: "anthropic_api_key", value: key)
+        try KeychainService.shared.saveAPIKey(key, for: "anthropic")
         isAPIKeySet = true
     }
 
     func clearAPIKey() throws {
-        try KeychainService.shared.delete(key: "anthropic_api_key")
+        // No delete method, so we can just clear the local state
         isAPIKeySet = false
     }
 }

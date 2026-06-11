@@ -1,0 +1,30 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "fmdb",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/ccgus/fmdb.git",
+          "name" : "FMDB"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "1227a3fa2b9916bfd75fe380eb45cd210e69e251",
+            "version" : "2.7.12"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "fmdb"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

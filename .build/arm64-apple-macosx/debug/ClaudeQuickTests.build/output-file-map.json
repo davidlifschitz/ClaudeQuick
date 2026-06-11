@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/master.swiftdeps"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuickTests/StorageServiceTests.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.dia"
+  }
+}

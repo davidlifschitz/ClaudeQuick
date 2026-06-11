@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/master.swiftdeps"
+  },
+  "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.dia"
+  }
+}

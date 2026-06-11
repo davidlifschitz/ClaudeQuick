@@ -1,0 +1,145 @@
+{
+  "": {
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/master.swiftdeps"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppDelegate.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppState.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ChatViewModel.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ClaudeQuickApp.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/APIModels.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/ContextSnapshot.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Conversation.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Message.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/APIClient.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/ContextExtractor.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/CostTracker.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/KeychainService.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/StorageService.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/SyncService.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ChatView.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ContextBadge.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/HistoryView.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/MessageRow.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/OnboardingView.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.dia"
+  },
+  "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/SettingsView.swift": {
+    "dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.d",
+    "object": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.dia"
+  }
+}

@@ -17,7 +17,7 @@ class ChatViewModel: ObservableObject {
     private let apiClient = APIClient.shared
     private let syncService = SyncService.shared
     private let contextExtractor = ContextExtractor.shared
-    private let costTracker = CostTracker.shared
+    let costTracker = CostTracker.shared
 
     // MARK: - Initialization
 

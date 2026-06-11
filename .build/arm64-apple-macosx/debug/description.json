@@ -1,0 +1,1204 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.xctest/Contents/MacOS/ClaudeQuickPackageTests",
+      "packagePath" : "/Users/thebiglipper/ClaudeQuick",
+      "productName" : "ClaudeQuickPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.ClaudeQuick-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/sources",
+      "importPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ChatViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ClaudeQuickApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/APIModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/ContextSnapshot.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Conversation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Message.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/APIClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/ContextExtractor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/CostTracker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/KeychainService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/StorageService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/SyncService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ChatView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ContextBadge.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/HistoryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/MessageRow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/OnboardingView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/SettingsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabase.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseAdditions.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabasePool.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseQueue.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMResultSet.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "ClaudeQuick",
+      "moduleOutputPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuick.swiftmodule",
+      "objects" : [
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swift.o",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+        "-module-cache-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "ClaudeQuick_main",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "claudequick"
+      ],
+      "outputFileMapPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuick.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppDelegate.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppState.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ChatViewModel.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ClaudeQuickApp.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/APIModels.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/ContextSnapshot.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Conversation.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Message.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/APIClient.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/ContextExtractor.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/CostTracker.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/KeychainService.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/StorageService.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/SyncService.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ChatView.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ContextBadge.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/HistoryView.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/MessageRow.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/OnboardingView.swift",
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/SettingsView.swift"
+      ],
+      "tempsPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.ClaudeQuickPackageTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/sources",
+      "importPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuickTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ClaudeQuickPackageTests",
+      "moduleOutputPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuickPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+        "-module-cache-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/include/ClaudeQuickPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "claudequick"
+      ],
+      "outputFileMapPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuickPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.ClaudeQuickTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/sources",
+      "importPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuickTests/StorageServiceTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ClaudeQuickTests",
+      "moduleOutputPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuickTests.swiftmodule",
+      "objects" : [
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+        "-module-cache-path",
+        "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "claudequick"
+      ],
+      "outputFileMapPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules/ClaudeQuickTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/thebiglipper/ClaudeQuick/ClaudeQuickTests/StorageServiceTests.swift"
+      ],
+      "tempsPath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "ClaudeQuick" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ClaudeQuick",
+      "-package-name",
+      "claudequick",
+      "-c",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppDelegate.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppState.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ChatViewModel.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ClaudeQuickApp.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/APIModels.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/ContextSnapshot.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Conversation.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Message.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/APIClient.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/ContextExtractor.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/CostTracker.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/KeychainService.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/StorageService.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/SyncService.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ChatView.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ContextBadge.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/HistoryView.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/MessageRow.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/OnboardingView.swift",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/SettingsView.swift",
+      "-I",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+      "-module-cache-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "ClaudeQuick_main",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "claudequick",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "ClaudeQuickPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ClaudeQuickPackageTests",
+      "-package-name",
+      "claudequick",
+      "-c",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+      "-module-cache-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/include/ClaudeQuickPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "claudequick",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "ClaudeQuickTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ClaudeQuickTests",
+      "-package-name",
+      "claudequick",
+      "-c",
+      "/Users/thebiglipper/ClaudeQuick/ClaudeQuickTests/StorageServiceTests.swift",
+      "-I",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/thebiglipper/ClaudeQuick/.build/checkouts/fmdb/src/fmdb",
+      "-module-cache-path",
+      "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "claudequick",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "ClaudeQuick" : [
+      "FMDB"
+    ],
+    "ClaudeQuickPackageTests" : [
+      "ClaudeQuickTests",
+      "ClaudeQuick",
+      "FMDB"
+    ],
+    "ClaudeQuickTests" : [
+      "ClaudeQuick",
+      "FMDB"
+    ],
+    "FMDB" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick-entitlement.plist"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppDelegate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ChatViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/App/ClaudeQuickApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/APIModels.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/ContextSnapshot.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Conversation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Models/Message.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/APIClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/ContextExtractor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/CostTracker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/KeychainService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/StorageService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Services/SyncService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ChatView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/ContextBadge.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/HistoryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/MessageRow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/OnboardingView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuick/Views/SettingsView.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/sources"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabase.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseAdditions.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabasePool.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseQueue.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMResultSet.m.o"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.product/Objects.LinkFileList"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/sources"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/APIModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ChatViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ClaudeQuickApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextBadge.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextExtractor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/ContextSnapshot.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Conversation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/CostTracker.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/HistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/KeychainService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/Message.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/MessageRow.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/OnboardingView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/StorageService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuick.build/SyncService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/StorageServiceTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabase.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseAdditions.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabasePool.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMDatabaseQueue.m.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/FMDB.build/FMResultSet.m.o"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/thebiglipper/ClaudeQuick/ClaudeQuickTests/StorageServiceTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/ClaudeQuickTests.build/sources"
+    },
+    "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/thebiglipper/ClaudeQuick/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

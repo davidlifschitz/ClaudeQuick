@@ -1,0 +1,11 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		00000001000000010000000100000001 = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1;}; };
+	};
+	rootObject = 00000001000000010000000100000001;
+}

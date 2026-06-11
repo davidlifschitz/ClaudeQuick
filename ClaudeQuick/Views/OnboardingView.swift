@@ -16,7 +16,7 @@ struct OnboardingView: View {
 
                 Text("Welcome to ClaudeQuick")
                     .font(.title)
-                    .fontWeight(.bold)
+                    .font(.title)
 
                 Text("Get started by adding your Anthropic API key")
                     .font(.body)
@@ -34,7 +34,7 @@ struct OnboardingView: View {
 
                         VStack(alignment: .leading, spacing: 2) {
                             Text("Get your API key")
-                                .fontWeight(.medium)
+                                .font(.headline)
                             Text("Visit console.anthropic.com")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
@@ -58,7 +58,7 @@ struct OnboardingView: View {
 
                     VStack(alignment: .leading, spacing: 2) {
                         Text("Paste your API key below")
-                            .fontWeight(.medium)
+                            .font(.headline)
                         Text("Your key is stored securely in Keychain")
                             .font(.caption)
                             .foregroundColor(.secondary)
@@ -72,7 +72,7 @@ struct OnboardingView: View {
             // API Key Input
             VStack(alignment: .leading, spacing: 8) {
                 Label("API Key", systemImage: "key.fill")
-                    .fontWeight(.medium)
+                    .font(.headline)
 
                 SecureField("sk-ant-...", text: $apiKeyInput)
                     .textFieldStyle(.roundedBorder)

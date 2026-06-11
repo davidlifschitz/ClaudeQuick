@@ -28,7 +28,7 @@ struct MessageRow: View {
                     HStack {
                         Text(message.role == .user ? "You" : "Claude")
                             .font(.caption)
-                            .fontWeight(.semibold)
+                            .font(.headline)
                             .foregroundColor(.secondary)
 
                         Spacer()

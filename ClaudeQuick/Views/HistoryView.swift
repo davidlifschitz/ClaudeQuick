@@ -104,7 +104,7 @@ struct ConversationRow: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(conversation.title)
                 .font(.body)
-                .fontWeight(.medium)
+                .font(.headline)
                 .lineLimit(1)
 
             HStack(spacing: 12) {
